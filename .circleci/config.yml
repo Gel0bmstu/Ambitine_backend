@@ -23,7 +23,8 @@ jobs:
           command: |
             ssh ntn@35.228.75.3 git clone https://github.com/Pickausernaame/Ambitine_backend.git
             ssh ntn@35.228.75.3 cd Ambitine_backend
-            ssh ntn@35.228.75.3 sudo docker-compose restart
+            ssh ntn@35.228.75.3 sudo docker-compose build ambitine
+            ssh ntn@35.228.75.3 sudo docker-compose up --no-deps -d ambitine
 
 workflows:
   version: 2
