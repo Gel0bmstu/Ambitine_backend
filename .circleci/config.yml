@@ -22,6 +22,7 @@ jobs:
           name: Deploy Over SSH
           command: |
             ssh ntn@35.228.75.3 cd Ambitine_backend
+            ssh ntn@35.228.75.3 ls
             ssh ntn@35.228.75.3 git pull
             ssh ntn@35.228.75.3 sudo docker rmi -f $(sudo docker images -f "dangling=true" -q)
             ssh ntn@35.228.75.3 sudo docker-compose up --no-deps -d ambitine
