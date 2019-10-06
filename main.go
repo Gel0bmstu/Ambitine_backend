@@ -4,5 +4,5 @@ import "github.com/Pickausernaame/Ambitine_backend/server"
 
 func main() {
 	app := server.New()
-	app.Run(":6666")
+	app.Run(":9090")
 }

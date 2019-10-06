@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Deploy Over SSH
+          command: |
+            ssh 35.228.75.3 rm build
+            ssh 35.228.75.3 mkdir build
+            ssh 35.228.75.3 cd build
+            ssh 35.228.75.3 git clone https://github.com/Pickausernaame/Ambitine_backend.git
+            ssh 35.228.75.3 cd Ambitine_backend
+            ssh 35.228.75.3 sudo docker_clean.sh
+            ssh 35.228.75.3 sudo docker-compose up
