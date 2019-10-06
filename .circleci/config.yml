@@ -22,8 +22,9 @@ jobs:
           name: Deploy Over SSH
           command: |
             ssh ntn@35.228.75.3 "cd Ambitine_backend; git pull;"
-#            ssh ntn@35.228.75.3 "cd Ambitine_backend; sudo docker rmi $(sudo docker images -f "dangling=true" -q);"
             ssh ntn@35.228.75.3 "cd Ambitine_backend; sudo docker-compose up --no-deps -d ambitine;"
+#            ssh ntn@35.228.75.3 "cd Ambitine_backend; sudo docker rmi $(sudo docker images -f "dangling=true" -q);"
+
 
 #            ssh ntn@35.228.75.3 git clone https://github.com/Pickausernaame/Ambitine_backend.git
 
