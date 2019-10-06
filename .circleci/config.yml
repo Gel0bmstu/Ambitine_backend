@@ -19,12 +19,9 @@ jobs:
             fingerprints:
               - "43:57:31:94:df:f1:77:18:ed:2b:73:16:41:b8:ec:7c"
       - run:
-          name: fix host authenticity for production server
-          command: ssh-keyscan 35.228.75.3 >> ~/.ssh/known_hosts
-      - run:
           name: Deploy Over SSH
           command: |
-            ssh 35.228.75.3
+            ssh ntn@35.228.75.3 echo privet
 #            ssh 35.228.75.3 rm build
 #            ssh 35.228.75.3 mkdir build
 #            ssh 35.228.75.3 cd build
