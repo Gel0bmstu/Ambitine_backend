@@ -1,7 +1,14 @@
 version: 2
 jobs:
   build:
-    #
+      docker:
+        - image: circleci/golang:1.12
+      working_directory: ~/Ambitine
+      steps:
+        - checkout
+        - run: go get -v -u
+        - run: go run main.go
+
   deploy:
     machine:
       enabled: true
