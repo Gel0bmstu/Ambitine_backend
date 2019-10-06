@@ -7,7 +7,7 @@ jobs:
       steps:
         - checkout
         - run: go get -v -u
-        - run: go run main.go
+        #- run: go run main.go
 
   deploy:
     machine:
