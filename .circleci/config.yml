@@ -10,6 +10,8 @@ jobs:
         #- run: go run main.go
 
   deploy:
+    machine:
+      enabled: true
     branches:
       only:
         - master
