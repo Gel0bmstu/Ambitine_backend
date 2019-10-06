@@ -30,7 +30,7 @@ type Hello struct {
 }
 
 func HelloFunc(c *gin.Context) {
-	res := Hello{Msg: "Hi"}
+	res := Hello{Msg: "Hi nigga"}
 	fmt.Print(res)
 	c.JSON(200, res)
 }
