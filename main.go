@@ -1,6 +1,6 @@
 package main
 
-import "./server"
+import "github.com/Pickausernaame/Ambitine_backend/server"
 
 func main() {
 	app := server.New()
