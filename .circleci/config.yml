@@ -34,3 +34,10 @@ jobs:
             ssh 35.228.75.3 cd Ambitine_backend
             ssh 35.228.75.3 sudo docker_clean.sh
             ssh 35.228.75.3 sudo docker-compose up
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
+      - deploy
