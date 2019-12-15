@@ -20,7 +20,7 @@ jobs:
               - "a9:6b:be:d5:9d:97:0f:38:6a:05:7a:d0:0a:ee:d1:73"
       - run:
           name: Deploy Over SSH
-          command: |1
+          command: |
             ssh root@104.248.254.28 "cd Ambitine_backend; git pull"
             ssh root@104.248.254.28 "cd Ambitine_backend; sudo docker-compose up --no-deps --build -d ambitine"
             ssh root@104.248.254.28 'cd Ambitine_backend; sudo docker rmi $(sudo docker images -f "dangling=true" -q)'
