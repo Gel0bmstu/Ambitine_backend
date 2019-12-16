@@ -22,8 +22,8 @@ jobs:
           name: Deploy Over SSH
           command: |
             ssh root@104.248.254.28 "cd Ambitine_backend; git pull"
-            ssh root@104.248.254.28 "cd Ambitine_backend; sudo docker kill ambitine"
-            ssh root@104.248.254.28 'cd Ambitine_backend; sudo docker rm ambitine'
+            ssh root@104.248.254.28 "cd Ambitine_backend; sudo docker kill ambitine_backend_ambitine_1"
+            ssh root@104.248.254.28 'cd Ambitine_backend; sudo docker rm ambitine_backend_ambitine_1'
             ssh root@104.248.254.28 "cd Ambitine_backend; sudo docker-compose up --no-deps --build -d ambitine"
 
 
