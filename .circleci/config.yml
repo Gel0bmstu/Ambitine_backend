@@ -26,7 +26,7 @@ jobs:
             ssh root@104.248.254.28 'cd Ambitine_backend; sudo docker rmi $(sudo docker images -f "dangling=true" -q)'
 
 
-
+#
 #            ssh ntn@35.228.75.3 git clone https://github.com/Pickausernaame/Ambitine_backend.git
 
 
